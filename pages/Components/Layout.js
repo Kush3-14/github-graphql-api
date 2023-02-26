@@ -11,7 +11,8 @@ const Layout = (props) => {
 
   const reposPerPage = 5;
   const offset = currentPage * reposPerPage;
-  const currentRepos = props.allRepos.slice(offset, offset + reposPerPage);
+
+  const currentRepos = props.allRepos.length > 0 ? props.allRepos.slice(offset, offset + reposPerPage) : 0;
 
   const pageCount = Math.ceil(props.allRepos.length / reposPerPage);
 
