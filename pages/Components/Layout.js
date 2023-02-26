@@ -11,7 +11,7 @@ const Layout = (props) => {
 
   const reposPerPage = 5;
   const offset = currentPage * reposPerPage;
-  const allReposArray = Object.values(props.allRepos);
+  const allReposArray = props.allRepos != null ? Object.values(props.allRepos) : [];
 
 
   const currentRepos = allReposArray.length > 0 ? props.allRepos.slice(offset, offset + reposPerPage) : 0;
