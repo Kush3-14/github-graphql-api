@@ -29,6 +29,7 @@ const CreateRepositoryForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createLink();
+    alert("Repo created at www.github.com/Kush3-14/"+formState.name);
   };
 
   return (

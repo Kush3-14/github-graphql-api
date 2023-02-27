@@ -83,7 +83,7 @@ export async function getStaticProps({ session }: any) {
   });
 
   const authLink = setContext((_, { headers }) => {
-    const accessToken = session?.accessToken || process.env.GITHUB_ACCESS_TOKEN;
+    const accessToken = session?.accessToken || process.env.API_GITHUB_ACCESS_TOKEN;
     return {
       headers: {
         ...headers,

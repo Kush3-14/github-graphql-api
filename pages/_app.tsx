@@ -6,7 +6,8 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
   headers: {
-    authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+    authorization: `Bearer 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`,
+    
   },
   cache: new InMemoryCache(),
 });
@@ -15,6 +16,7 @@ const client = new ApolloClient({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    
     <ApolloProvider client={client}>
     <SessionProvider session={pageProps.session} >
       <Component {...pageProps} />
